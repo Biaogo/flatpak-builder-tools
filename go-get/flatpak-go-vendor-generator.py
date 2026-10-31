@@ -95,7 +95,7 @@ def get_go_redirect(html_data):
 
 
 def go_module_to_flatpak(m):
-    if not m.name.startswith("github.com"):
+    if m.name.split("/")[0] != "github.com":
         url = m.name
     else:
         splits = m.name.split('/')
